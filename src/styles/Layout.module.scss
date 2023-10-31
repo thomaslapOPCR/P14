@@ -1,0 +1,66 @@
+.container {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.main-content {
+  /* Styles pour votre contenu principal, comme le background, iraient ici */
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-wealth-health {
+  width: 60px;
+  height: auto;
+}
+
+.footer-text {
+  text-align: right;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
