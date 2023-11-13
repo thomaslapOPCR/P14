@@ -9,7 +9,7 @@ import Dropdown from "../../components/dropDown/DropDown";
 
 const Create = () => {
     const [errors, setErrors] = useState({});
-    const [isModalVisible, setIsModalVisible] = useState(true);
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const handleClose = () => setIsModalVisible(false);
     const [formData, setFormData] = useState({
         firstName: "",
@@ -22,15 +22,37 @@ const Create = () => {
         postalCode: "",
         city: "",
     });
+/*
+* age mini / max
+*
+* */
+    function formatDate(date) {
+        const d = new Date(date);
+        const month = d.getMonth() + 1;
+        const day = d.getDate();
+        const year = d.getFullYear();
+        return new Date(year, month - 1, day);
+    }
+
 
     const onlyString = "Only alphabets are allowed for this field";
     const stringRegex = /^[aA-zZ\s]+$/;
+    const today = new Date();
+    const maxBirthDate = new Date(1950 + 62, today.getMonth(), today.getDate());
+    const minBirthDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+
     const validationSchema = yup.object().shape({
         firstName: yup.string().matches(stringRegex, onlyString).required('First Name is required'),
         lastName: yup.string().matches(stringRegex, onlyString).required('Last Name is required'),
         states: yup.string().matches(stringRegex, onlyString).required('State is required'),
-        birthDate: yup.date().required('Date of Birth is required'),
-        departureDate: yup.date().required('Departure Date is required').min(yup.ref('birthDate'), 'Departure Date cannot be before Date of Birth'),
+        birthDate: yup.date().transform((originalValue) => {
+            return originalValue ? formatDate(originalValue) : originalValue;
+        }).required('Date of Birth is required')
+            .max(maxBirthDate, 'You cannot be older than 62 years old'),
+        departureDate: yup.date().transform((originalValue) => {
+            return originalValue ? formatDate(originalValue) : originalValue;
+        }).required('Departure Date is required')
+            .min(yup.ref('birthDate'), 'Departure Date cannot be before Date of Birth'),
         department: yup.string().matches(stringRegex, onlyString).required('Department is required'),
         address: yup.string().matches(/^[a-zA-Z0-9 ]+$/, "Only alphabets and numbers are allowed for this field").required('Address is required'),
         postalCode: yup.number().required('Zip Code is required').integer('Only numbers are allowed for this field'),
@@ -121,10 +143,12 @@ const Create = () => {
                     <DatePicker
                         value=""
                         onChange={(formattedDate) => {
-                            formData.birthDate = formattedDate;
+                            console.log(formattedDate)
+                            formData.birthDate = formattedDate
                         }}
                         params={{ dateFormat: 'MM/DD/YYYY', subtractYears: 18, today: false }}
                     />
+                    <p>{formData.birthDate}</p>
                     {errors.birthDate && <p className={styles.error}>{errors.birthDate}</p>}
                 </label>
                 <label>
@@ -136,6 +160,7 @@ const Create = () => {
                         }}
                         params={{ dateFormat: 'MM/DD/YYYY', subtractYears: 0,today: true }}
                     />
+                    <p>{formData.departureDate}</p>
                     {errors.departureDate && <p className={styles.error}>{errors.departureDate}</p>}
                 </label>
                 <label>

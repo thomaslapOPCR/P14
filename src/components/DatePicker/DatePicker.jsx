@@ -17,8 +17,6 @@ const DatePicker = ({ value, onChange, params = {} }) => {
         return format.replace('MM', month).replace('DD', day).replace('YYYY', year);
     };
 
-
-
     const formattedDefaultDate = formatDate(initialDate, dateFormat);
     const [inputValue, setInputValue] = useState(formattedDefaultDate);
 
@@ -47,13 +45,13 @@ const DatePicker = ({ value, onChange, params = {} }) => {
     const handleInputBlur = () => {
         const parts = inputValue.split('/');
         if (parts.length === 3) {
-            const month = parseInt(parts[0], 10) - 1;
+            const month = parseInt(parts[0], 10);
             const day = parseInt(parts[1], 10);
             const year = parseInt(parts[2], 10);
-            const newDate = new Date(year, month, day);
+            const newDate = new Date(year, month - 1, day)
             if (!isNaN(newDate)) {
                 setSelectedDate(newDate);
-                onChange(newDate.toLocaleDateString('en-GB'));
+                onChange(formatDate(newDate, 'MM/DD/YYYY')); // Utilisez le format 'MM/DD/YYYY'
             }
         }
     };
@@ -61,11 +59,20 @@ const DatePicker = ({ value, onChange, params = {} }) => {
     const handleDateClick = (day) => {
         const newDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), day);
         setSelectedDate(newDate);
-        onChange(newDate.toLocaleDateString('en-GB'));
+        onChange(formatDate(newDate, 'MM/DD/YYYY'));
         setShowDropdown(false);
     };
 
-    const daysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
+    const daysInMonth = (month, year) => {
+        const currentDate = new Date();
+        const lastDayInMonth = new Date(year, month + 1, 0).getDate();
+        return Array.from({ length: lastDayInMonth }, (_, i) => i + 1)
+            .filter(day => {
+                const currentDateInMonth = new Date(year, month, day);
+                return currentDateInMonth <= currentDate;
+            });
+    };
+
 
     const toggleDropdown = () => {
         if (showDropdown) {
@@ -115,16 +122,17 @@ const DatePicker = ({ value, onChange, params = {} }) => {
                         </select>
                     </div>
                     <div className="days-grid">
-                        {Array.from({ length: daysInMonth(selectedDate.getMonth(), selectedDate.getFullYear()) }, (_, i) => i + 1).map((day) => (
+                        {daysInMonth(selectedDate.getMonth(), selectedDate.getFullYear()).map((day) => (
                             <div key={day} className={`day ${day === selectedDate.getDate() ? 'selected' : ''}`} onClick={(e) => {
-                                e.preventDefault()
-                                handleDateClick(day)
+                                e.preventDefault();
+                                handleDateClick(day);
                                 setShowDropdown(false);
                             }}>
                                 {day}
                             </div>
                         ))}
                     </div>
+
                     {params.today ? <div className="buttonsContainer">
                         <button className="buttons" onClick={() => {
                             const today = new Date();
