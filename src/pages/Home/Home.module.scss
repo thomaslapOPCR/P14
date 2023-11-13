@@ -1,0 +1,42 @@
+@import "../../styles/varibles.scss";
+
+
+
+.mainContent {
+
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+
+  .right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .rightText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #242425;
+      p:nth-child(1) {
+        font-weight: 900;
+        font-size: 1.5vw;
+        width: 70%;
+      }
+      p:nth-child(2) {
+        font-weight: 500;
+        font-size: 1vw;
+        width: 45%;
+        text-align-last: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}

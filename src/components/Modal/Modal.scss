@@ -1,0 +1,39 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.91);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 101;
+
+   h2,p,button {
+     font-family: 'Poppins' , sans-serif;
+   }
+
+  button {
+
+    right: 10px;
+    top: 5px;
+    background-color: #ae1b1b;
+    cursor: pointer;
+    padding: 2px 7px;
+    text-align: center;
+    &:hover {
+      background-color: darken(#ae1b1b,10);
+      transition:  background-color .5s;
+    }
+  }
+}

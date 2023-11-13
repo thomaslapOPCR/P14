@@ -1,0 +1,142 @@
+[
+  {
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "status": "Inactive",
+    "birthDate": "03/12/1985",
+    "departureDate": "02/15/2022",
+    "department": "Finance",
+    "address": "456 Elm St",
+    "postalCode": "12346",
+    "city": "New York",
+    "states": "HAWAI"
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Johnson",
+    "status": "Active",
+    "birthDate": "07/05/1979",
+    "departureDate": "12/10/2021",
+    "department": "Marketing",
+    "address": "789 Oak St",
+    "postalCode": "65432",
+    "city": "Los Angeles",
+    "states": "CALIFORNIA"
+  },
+  {
+    "firstName": "Charlie",
+    "lastName": "Williams",
+    "status": "Active",
+    "birthDate": "11/23/1982",
+    "departureDate": "11/09/2019",
+    "department": "IT",
+    "address": "321 Maple St",
+    "postalCode": "98765",
+    "city": "Chicago",
+    "states": "ILLINOIS"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Brown",
+    "status": "Active",
+    "birthDate": "04/17/1990",
+    "departureDate": "07/04/2023",
+    "department": "Operations",
+    "address": "123 Pine St",
+    "postalCode": "54321",
+    "city": "Houston",
+    "states": "TEXAS"
+  },
+  {
+    "firstName": "Eve",
+    "lastName": "Davis",
+    "status": "Inactive",
+    "birthDate": "09/29/1988",
+    "departureDate": "01/01/2020",
+    "department": "Human Resources",
+    "address": "456 Birch St",
+    "postalCode": "67890",
+    "city": "Phoenix",
+    "states": "ARIZONA"
+  },
+  {
+    "firstName": "Frank",
+    "lastName": "Miller",
+    "status": "Active",
+    "birthDate": "06/11/1975",
+    "departureDate": "08/21/2021",
+    "department": "Legal",
+    "address": "789 Cedar St",
+    "postalCode": "21098",
+    "city": "Philadelphia",
+    "states": "PENNSYLVANIA"
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Martinez",
+    "status": "Active",
+    "birthDate": "12/14/1984",
+    "departureDate": "03/17/2022",
+    "department": "Research and Development",
+    "address": "321 Spruce St",
+    "postalCode": "87654",
+    "city": "San Antonio",
+    "states": "TEXAS"
+  },
+  {
+    "firstName": "Henry",
+    "lastName": "Wilson",
+    "status": "Inactive",
+    "birthDate": "01/06/1980",
+    "departureDate": "05/30/2023",
+    "department": "Sales",
+    "address": "123 Willow St",
+    "postalCode": "43521",
+    "city": "San Diego",
+    "states": "CALIFORNIA"
+  },
+  {
+    "firstName": "thomas",
+    "lastName": "laporte",
+    "states": "American Samoa",
+    "birthDate": "11/11/2005",
+    "departureDate": "03/11/2023",
+    "department": "Marketing",
+    "address": "21 rue de la gestions",
+    "postalCode": "02830",
+    "city": "Hirson"
+  },
+  {
+    "firstName": "ngfgnfg",
+    "lastName": "fgnfgn",
+    "states": "Arizona",
+    "birthDate": "01/11/2005",
+    "departureDate": "01/11/2023",
+    "department": "Engineering",
+    "address": "rthhhhhhhhhhhhhhs",
+    "postalCode": "12457",
+    "city": "jrtjrtjrtjrtj"
+  },
+  {
+    "firstName": "thomas",
+    "lastName": "lap",
+    "states": "Alabama",
+    "birthDate": "07/11/2005",
+    "departureDate": "02/11/2023",
+    "department": "Marketing",
+    "address": "hrthrth",
+    "postalCode": "45678",
+    "city": "hrthrht"
+  },
+  {
+    "firstName": "trhrt",
+    "lastName": "rthth",
+    "states": "Alaska",
+    "birthDate": "07/11/2004",
+    "departureDate": "01/10/2023",
+    "department": "Sales",
+    "address": "thrthrt",
+    "postalCode": "47475",
+    "city": "hrthrt"
+  }
+]
