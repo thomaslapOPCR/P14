@@ -94,49 +94,5 @@
     "postalCode": "43521",
     "city": "San Diego",
     "states": "CALIFORNIA"
-  },
-  {
-    "firstName": "thomas",
-    "lastName": "laporte",
-    "states": "American Samoa",
-    "birthDate": "11/11/2005",
-    "departureDate": "03/11/2023",
-    "department": "Marketing",
-    "address": "21 rue de la gestions",
-    "postalCode": "02830",
-    "city": "Hirson"
-  },
-  {
-    "firstName": "ngfgnfg",
-    "lastName": "fgnfgn",
-    "states": "Arizona",
-    "birthDate": "01/11/2005",
-    "departureDate": "01/11/2023",
-    "department": "Engineering",
-    "address": "rthhhhhhhhhhhhhhs",
-    "postalCode": "12457",
-    "city": "jrtjrtjrtjrtj"
-  },
-  {
-    "firstName": "thomas",
-    "lastName": "lap",
-    "states": "Alabama",
-    "birthDate": "07/11/2005",
-    "departureDate": "02/11/2023",
-    "department": "Marketing",
-    "address": "hrthrth",
-    "postalCode": "45678",
-    "city": "hrthrht"
-  },
-  {
-    "firstName": "trhrt",
-    "lastName": "rthth",
-    "states": "Alaska",
-    "birthDate": "07/11/2004",
-    "departureDate": "01/10/2023",
-    "department": "Sales",
-    "address": "thrthrt",
-    "postalCode": "47475",
-    "city": "hrthrt"
   }
 ]

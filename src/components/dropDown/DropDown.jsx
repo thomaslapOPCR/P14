@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './DropDown.scss';
+import {ReactComponent as Arrow} from "./sort-down-solid.svg";
+import {clsx} from "clsx";
 
-const Dropdown = ({ value, onChange, placeholder, children }) => {
+const Dropdown = ({ value, onChange, placeholder, children, disabled, ico  }) => {
     const [isOpen, setIsOpen] = useState(false);
 
 
@@ -15,13 +17,14 @@ const Dropdown = ({ value, onChange, placeholder, children }) => {
     };
 
     return (
-        <div className="dropdown">
+        <div className= "dropdown">
             <p
                 className="dropdown-button"
-                onClick={toggleDropdown}
+                onClick={!disabled && toggleDropdown}
                 type="button"
             >
                 {value || placeholder}
+                {ico || <Arrow className={clsx(isOpen && "rotate")}/>}
             </p>
             {isOpen && (
                 <div
