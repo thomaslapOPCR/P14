@@ -17,8 +17,10 @@
 }
 
 .logo {
-  width: 50px;
-  height: auto;
+  color: darkgreen;
+  text-decoration: none;
+  font-size: 1.1vw;
+  padding-left: 20px;
 }
 
 .buttons {
@@ -36,6 +38,7 @@
   transition: background-color 0.3s;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
+  font-size: 1.1vw;
 }
 
 .btn:hover {

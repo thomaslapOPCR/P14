@@ -6,12 +6,13 @@ import './List.scss';
 
 const EmployeeTable = () => {
     const [gridApi, setGridApi] = useState(null);
+    // eslint-disable-next-line
     const [gridColumnApi, setGridColumnApi] = useState(null);
     const [searchValue, setSearchValue] = useState('');
     const [pageSize, setPageSize] = useState(10);
     const [rowData, setRowData] = useState([]);
     const [noResults, setNoResults] = useState(false);
-    console.log(gridColumnApi);
+
 
     useEffect(() => {
         async function getData() {
@@ -32,6 +33,8 @@ const EmployeeTable = () => {
         { headerName: "states", field: "states", sortable: true},
         { headerName: "Zip code", field: "postalCode", sortable: true },
     ];
+
+
 
     const onGridReady = params => {
         setGridApi(params.api);

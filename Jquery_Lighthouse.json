@@ -6561,7 +6561,7 @@
       ],
       "node_modules/lighthouse-plugin-publisher-ads/messages/common-strings.js | GROUPS__ADS_BEST_PRACTICES": [
         "categoryGroups[lighthouse-plugin-publisher-ads-ads-best-practices].title"
-      ]
+      ]<
     }
   }
 }

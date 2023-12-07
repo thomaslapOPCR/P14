@@ -1,0 +1,85 @@
+:Utilisation avec le mode désactivé
+
+import React, { useState } from 'react';
+import Dropdown from './Dropdown';
+
+const MyComponent = () => {
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  const handleChange = (value) => {
+    setSelectedValue(value);
+  };
+
+  return (
+    <div>
+      <h1>Dropdown Example with Disabled State</h1>
+      <Dropdown
+        value={selectedValue}
+        onChange={handleChange}
+        placeholder="Select an option"
+        disabled
+      >
+        <div data-value="option1">Option 1</div>
+        <div data-value="option2">Option 2</div>
+        <div data-value="option3">Option 3</div>
+      </Dropdown>
+      <p>Selected Value: {selectedValue}</p>
+    </div>
+  );
+};
+
+export default MyComponent;
+
+
+
+: Utilisation de styles personnalisés
+
+import React, { useState } from 'react';
+import Dropdown from './Dropdown';
+
+const MyComponent = () => {
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  const handleChange = (value) => {
+    setSelectedValue(value);
+  };
+
+  const customStyles = {
+    dropdownButtonStyle: {
+      backgroundColor: 'lightblue',
+      color: 'white',
+      border: '1px solid darkblue',
+      borderRadius: '4px',
+      padding: '8px',
+      cursor: 'pointer',
+    },
+    arrowIconStyle: {
+      fill: 'white',
+    },
+    dropdownMenuStyle: {
+      backgroundColor: 'lightblue',
+      border: '1px solid darkblue',
+      borderRadius: '4px',
+      marginTop: '4px',
+    },
+  };
+
+  return (
+    <div>
+      <h1>Dropdown Example with Custom Styles</h1>
+      <Dropdown
+        value={selectedValue}
+        onChange={handleChange}
+        placeholder="Select an option"
+        styleProps={customStyles}
+      >
+        <div data-value="option1">Option 1</div>
+        <div data-value="option2">Option 2</div>
+        <div data-value="option3">Option 3</div>
+      </Dropdown>
+      <p>Selected Value: {selectedValue}</p>
+    </div>
+  );
+};
+
+export default MyComponent;

@@ -9,6 +9,7 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   h1 {
     font-family: 'Poppins' , sans-serif;
+    font-size: 1.2vw;
   }
 }
 
@@ -27,6 +28,7 @@ label {
   font-family: 'Poppins' , sans-serif;
   font-weight: 400;
   width: 50%;
+  font-size: 1.1vw;
 }
 
 input, select, button, textarea {
@@ -74,5 +76,48 @@ button {
   &:hover {
     background-color: darken(dodgerblue, 10);
     transition: background-color .5s;
+  }
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 80%;
+  align-items: center;
+font-size: 1.1vw;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.ldsdualring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+.ldsdualring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

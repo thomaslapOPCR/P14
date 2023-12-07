@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/WealthHealth.png";
-import Illustration from "../../assets/homePage_Image.png";
+import Illustration from "../../assets/homePage_Image.webp";
 import styles from './Home.module.scss';
 
 const Home = () => {
